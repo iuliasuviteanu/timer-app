@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+  margin: -30px auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.App h1 {
+  margin: 0;
+}
+
+.App > div {
+  display: flex;
+}
+
+.App__seconds {
+  font-size: 55px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+Button {
+  margin-right: 15px;
+}
