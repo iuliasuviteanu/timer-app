@@ -9,7 +9,7 @@ function App() {
   const [disabledStop, setDisabledStop] = useState(false);
 
   useEffect(() => {
-    let interval: any;
+    let interval: ReturnType<typeof setInterval> | undefined;
 
     if (isPaused) {
       interval = setInterval(() => {
@@ -23,13 +23,13 @@ function App() {
     return () => clearInterval(interval);
   }, [isPaused, seconds]);
 
-  const handleStartButton = (e: any) => {
+  const handleStartButton = () => {
     setIsPaused(true);
     setDisabledStart(true);
     setDisabledStop(false);
   };
 
-  const handlePauseButton = (e: any) => {
+  const handlePauseButton = () => {
     setIsPaused(false);
     setDisabledStop(true);
     setDisabledStart(false);
